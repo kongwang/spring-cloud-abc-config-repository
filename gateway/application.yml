@@ -5,7 +5,7 @@ spring:
         - id: service-a
           uri: lb://service-a
           predicates:
-           - Path=/aa/**
+           - Path=/a/**
           filters:
           - StripPrefix=1
         - id: service-b
