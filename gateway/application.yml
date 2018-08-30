@@ -11,6 +11,10 @@ spring:
         - id: service-b
           uri: lb://service-b
           predicates:
-           - Path=/b/**
+          - Path=/b/**
           filters:
           - StripPrefix=1
+        - id: gateway
+          uri: lb://gateway
+          predicates:
+          - Path=/actuator/**
