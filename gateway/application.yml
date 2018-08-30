@@ -14,7 +14,3 @@ spring:
           - Path=/b/**
           filters:
           - StripPrefix=1
-        - id: gateway
-          uri: lb://gateway
-          predicates:
-          - Path=/actuator/**
